@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="salad_order">
+	
+	<select id="salad_order_cnt_mm" parameterType="hashmap" resultType="int">
+    	select 
+			ifnull(sum(order_a_cnt),0) as m_order_a_cnt_mm,
+			ifnull(sum(order_b_cnt),0) as m_order_b_cnt_mm
+		from 
+			TB_FOOD_ORDER_HIST where 1=1 and id=#{user_id} 
+			and date_format(created_at, '%Y%m') = date_format(now(), '%Y%m')
+    </select>
+    
+	<select id="getSaladOrderCntMM" parameterType="hashmap" resultType="hashmap">
+    	select 
+			ifnull(sum(order_a_cnt),0) as m_order_a_cnt_mm,
+			ifnull(sum(order_b_cnt),0) as m_order_b_cnt_mm
+		from 
+			TB_FOOD_ORDER_HIST where 1=1 and id=#{user_id} 
+			and date_format(updated_at, '%Y%m') = date_format(now(), '%Y%m')
+    </select>
+    
+    <select id="saladOrderCheck" parameterType="hashmap" resultType="int">
+    	select 
+			count(*)
+		from 
+			TB_FOOD_ORDER_HIST where 1=1 and order_no = #{order_no}
+    </select>
+    
+    <insert id="saladOrderSave" parameterType="hashmap">
+    	insert into TB_FOOD_ORDER_HIST 
+    		(order_no, order_a_cnt, order_b_cnt, id, name, dept, created_at) 
+    	values 
+    		(#{order_no}, #{order_a_cnt}, #{order_b_cnt}, #{user_id}, #{name}, #{dept}, sysdate())
+    </insert>
+    
+    <select id="getMySaladOrderTotalCount" parameterType="hashmap" resultType="int">
+        select
+            ifnull(sum(order_a_cnt),0) as  sumACntMM,
+			ifnull(sum(order_b_cnt),0) as  sumBCntMM
+        from
+            TB_FOOD_ORDER_HIST
+        where 1=1
+        and id = #{USERID}
+        and date_format(created_at, '%Y-%m') = #{YYMM} 
+    </select>
+    
+    <select id="getMySaladOrderList" parameterType="hashmap" resultType="hashmap">
+        select
+        	seq, name, id, dept, order_no, order_a_cnt, order_b_cnt, date_format(created_at,'%Y-%m-%d %H:%i:%s') as created_at
+        from
+            TB_FOOD_ORDER_HIST
+        where 1=1
+        and id = #{USERID}
+        and date_format(created_at, '%Y-%m') = #{YYMM}
+        order by 
+        	seq desc
+    </select>
+
+	<select id="getSaladOrderTotalCount" parameterType="hashmap" resultType="hashmap">
+    	select 
+			count(*) as orderTotalCnt , 
+			ifnull(sum(order_a_cnt)+sum(order_b_cnt),0) as orderSumCnt
+		from 
+			TB_FOOD_ORDER_HIST where 1=1 
+			<if test="search_type =='id' and search_value !='' ">
+				and id=#{search_value} 
+			</if>
+			<if test="search_type =='order_no' and search_value !='' ">
+				and order_no=#{search_value} 
+			</if>
+			<if test="date_start !='' and date_end !='' ">
+				and date_format(created_at, '%Y-%m-%d') between #{date_start} AND #{date_end}
+			</if>
+    </select>
+        
+    <select id="getSaladOrderList" parameterType="hashmap" resultType="hashmap">
+        select
+        	seq, name, id, dept, order_no, order_a_cnt, order_b_cnt, order_status, date_format(created_at,'%Y-%m-%d %H:%i:%s') as created_at
+        from
+            TB_FOOD_ORDER_HIST
+        where 1=1
+        <if test="search_type =='id' and search_value !='' ">
+			and id=#{search_value} 
+		</if>
+		<if test="search_type =='order_no' and search_value !='' ">
+			and order_no=#{search_value} 
+		</if>
+		<if test="date_start !='' and date_end !='' ">
+			and date_format(created_at, '%Y-%m-%d') between #{date_start} AND #{date_end}
+		</if>
+        order by seq desc
+        limit #{startNo}, #{endNo}
+    </select>
+    
+    <select id="getSaladOrderListExcel" parameterType="hashmap" resultType="hashmap">
+        select
+        	seq, name, id, dept, order_no, order_a_cnt, order_b_cnt, order_status, date_format(created_at,'%Y-%m-%d %H:%i:%s') as created_at
+        from
+            TB_FOOD_ORDER_HIST
+        where 1=1
+        <if test="search_type =='id' and search_value !='' ">
+			and id=#{search_value} 
+		</if>
+		<if test="search_type =='order_no' and search_value !='' ">
+			and order_no=#{search_value} 
+		</if>
+		<if test="date_start !='' and date_end !='' ">
+			and date_format(created_at, '%Y-%m-%d') between #{date_start} AND #{date_end}
+		</if>
+        order by seq desc
+    </select>
+    
+    <select id="getSaladOrderInfo" parameterType="hashmap" resultType="hashmap">
+        select 
+			seq, order_no, order_a_cnt, date_format(created_at, '%Y-%m-%d %H:%i:%s') as created_at,
+			(
+				select   
+					ifnull(sum(order_a_cnt),0) as m_order_a_cnt_mm
+				from TB_FOOD_ORDER_HIST
+				where id = #{user_id}
+				and date_format(created_at, '%Y%m') = date_format(now(), '%Y%m') 
+			) m_order_a_cnt_mm,
+            (
+				select   
+					ifnull(sum(order_b_cnt),0) as m_order_b_cnt_mm
+				from TB_FOOD_ORDER_HIST
+				where id = #{user_id}
+				and date_format(created_at, '%Y%m') = date_format(now(), '%Y%m') 
+			) m_order_b_cnt_mm
+		from 
+			TB_FOOD_ORDER_HIST 
+		where 1=1 and id= #{user_id}
+		and order_no= #{order_no}
+        <if test="category !='' ">
+		    <!-- and category = #{category} -->
+		</if>
+    </select>
+    <!-- <select id="saladOrderTimeCheck" parameterType="hashmap" resultType="int">
+    	select  
+    		count(*) 
+    	from 
+    		tb_order_time 
+    	where DATE_FORMAT(now(),'%H:%i') between start_time and end_time
+    </select> -->
+</mapper>

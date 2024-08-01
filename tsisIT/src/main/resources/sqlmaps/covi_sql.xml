@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="covi_smart">
+	
+	
+    <select id="userIdCheck" parameterType="hashmap" resultType="hashmap">
+    	select 
+    		ur_code as user_id,
+    		DisplayName as user_name,
+    		AD_Department as user_dept,
+    		encmessengerpassword as pwd, 
+    		jobgroup,
+    		dn_code, 
+    		isuse,
+    		isdisplay as ISDISPLAY
+    	from 
+    		dbo.Base_object_ur 
+    	where 1=1 
+    		and ur_code  = #{user_id} 
+    		<if test="user_pass !='' ">
+    		and jobgroup in ('004','023')
+    		and dn_code in ('G002')
+    		</if>
+    	    and isuse ='Y'
+    </select>
+    
+    <select id="userIdCheckView" parameterType="hashmap" resultType="hashmap">
+    	select
+			EmpNo as user_id,
+			DisplayName as user_name,  
+			AD_Department as user_dept,
+			encmessengerpassword as pwd,
+			dn_code ,
+			isuse,
+			isdisplay as ISDISPLAY
+		from 
+			dbo.VW_Mobile_Store
+		where 1=1
+		and empno= #{user_id}
+		and isuse='Y'
+		and dn_code in ('G002') 
+    </select>
+     
+</mapper>

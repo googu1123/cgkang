@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="interview">
+
+    <select id="getInterviewList" parameterType="hashmap" resultType="hashmap">
+		select 
+			seq, interview_day, timezone
+			, (select count(1) from tb_interview_reservation where interview_time_seq = a.seq ) as cnt
+		from 
+			tb_interview_time a
+		where interview_day =#{interview_day}	
+        <if test="category !='' ">
+		    <!-- and category = #{category} -->
+		</if>
+        order by a.seq 
+    </select>
+    
+    <select id="getInterviewListGubun" parameterType="hashmap" resultType="hashmap">
+		select 
+			seq, interview_day, timezone
+			, (select count(1) from tb_interview_reservation where interview_time_seq = a.seq and gubun="A") as cntA
+			, (select count(1) from tb_interview_reservation where interview_time_seq = a.seq and gubun="B") as cntB
+		from 
+			tb_interview_time a
+		where interview_day =#{interview_day}	
+        <if test="category !='' ">
+		    <!-- and category = #{category} -->
+		</if>
+        order by a.seq 
+    </select>
+    
+    <select id="getInterviewInfo" parameterType="hashmap" resultType="hashmap">
+        select
+            seq, interview_day, timezone
+        from
+            tb_interview_time
+        where seq = #{seq}
+    </select>
+    
+    <insert id="insert_interview" parameterType="hashmap">
+    	insert into tb_interview_reservation 
+    		(interview_time_seq, phone, regdate) 
+		values
+			(#{interview_time_seq}, #{phone}, sysdate())
+    </insert>
+    
+    <select id="selectCntPhone" parameterType="hashmap" resultType="int">
+    	select count(*) from tb_interview_reservation where phone = #{phone}
+    </select>
+    
+    <select id="getInterviewCheck" parameterType="hashmap" resultType="hashmap"> 
+    	select 
+    		a.seq, a.interview_time_seq, a.phone,b.interview_day,b.timezone 
+    	from 
+    		tb_interview_reservation a, tb_interview_time b
+		where a.interview_time_seq = b.seq and a.phone=#{phone}
+    </select>
+    
+    <select id="phoneNumberCheck" parameterType="hashmap" resultType="int">
+    	select count(*) from tb_interview_phoneNumber where phone_number = #{phone}
+    </select>
+    
+    <select id="getPhoneNumberInfo" parameterType="hashmap" resultType="hashmap">
+    	select user_name, phone_number from tb_interview_phoneNumber where phone_number = #{phone}
+    </select>
+    
+    
+    <select id="selectCntTime" parameterType="hashmap" resultType="int">
+    	select count(*) from tb_interview_reservation where interview_time_seq = #{interview_time_seq}
+    </select>
+    
+    <select id="selectCntTimeGubun" parameterType="hashmap" resultType="int">
+    	select count(*) from tb_interview_reservation where interview_time_seq = #{interview_time_seq} and gubun = #{gubun}
+    </select>
+    
+</mapper>

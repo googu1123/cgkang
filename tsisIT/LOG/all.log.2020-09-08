@@ -1,0 +1,283 @@
+2020-09-08 10:35:14,582 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 10:35:14,692 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 10:35:14 KST 2020]; root of context hierarchy []
+2020-09-08 10:35:14,768 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 10:35:18,759 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 10:35:18,836 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@342b76a8: defining beans [jdbc,sqlSessionFactory,sqlSession,dataSource]; root of factory hierarchy []
+2020-09-08 10:35:18,928 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 10:35:19,677 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 5086 ms []
+2020-09-08 10:35:19,823 INFO [org.springframework.web.servlet.FrameworkServlet] FrameworkServlet 'appServlet': initialization started []
+2020-09-08 10:35:19,829 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Sep 08 10:35:19 KST 2020]; parent: Root WebApplicationContext []
+2020-09-08 10:35:19,832 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml] []
+2020-09-08 10:35:19,970 INFO [org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider] JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning []
+2020-09-08 10:35:19,973 INFO [org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider] JSR-330 'javax.inject.Named' annotation found and supported for component scanning []
+2020-09-08 10:35:20,150 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring []
+2020-09-08 10:35:20,160 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@225c4dc4: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,transactionManager,DeliveryDao,deliveryController,applicationContextProvider,DeliveryService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@342b76a8 []
+2020-09-08 10:35:20,355 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_save.do],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.spring.controller.DeliveryController.save(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) []
+2020-09-08 10:35:20,357 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_search],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.spring.controller.DeliveryController.search(java.lang.String) []
+2020-09-08 10:35:20,358 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_registerForm.do],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.controller.DeliveryController.registerForm(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) []
+2020-09-08 10:35:21,166 INFO [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0' []
+2020-09-08 10:35:21,353 INFO [org.springframework.web.servlet.FrameworkServlet] FrameworkServlet 'appServlet': initialization completed in 1529 ms []
+2020-09-08 10:36:52,747 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:37:34,869 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:38:19,156 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:50:41,413 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:51:00,926 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:51:41,328 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:52:36,764 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 10:53:52,614 INFO [org.springframework.context.support.AbstractApplicationContext] Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Sep 08 10:35:19 KST 2020]; parent: Root WebApplicationContext []
+2020-09-08 10:53:52,631 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@225c4dc4: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,transactionManager,DeliveryDao,deliveryController,applicationContextProvider,DeliveryService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@342b76a8 []
+2020-09-08 10:53:56,305 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 10:53:56,489 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 10:53:56 KST 2020]; root of context hierarchy []
+2020-09-08 10:53:56,593 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 10:53:56,791 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 10:53:56,861 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4eba9771: defining beans [jdbc,sqlSessionFactory,sqlSession,dataSource]; root of factory hierarchy []
+2020-09-08 10:53:56,935 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 10:53:56,939 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4eba9771: defining beans [jdbc,sqlSessionFactory,sqlSession,dataSource]; root of factory hierarchy []
+2020-09-08 10:53:56,941 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed []
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbc': Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [config/jdbc.properties] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5016)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5528)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:4033)
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:425)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1345)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1546)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1556)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1556)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1524)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: class path resource [config/jdbc.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:158)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:181)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:161)
+	at org.springframework.beans.factory.config.PropertiesFactoryBean.createInstance(PropertiesFactoryBean.java:113)
+	at org.springframework.beans.factory.config.PropertiesFactoryBean.createProperties(PropertiesFactoryBean.java:98)
+	at org.springframework.beans.factory.config.PropertiesFactoryBean.afterPropertiesSet(PropertiesFactoryBean.java:69)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 23 more
+2020-09-08 18:28:45,138 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 18:28:45,244 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 18:28:45 KST 2020]; root of context hierarchy []
+2020-09-08 18:28:45,333 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 18:28:46,338 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 18:28:46,423 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2fe6ec54: defining beans [jdbc,sqlSessionFactory,sqlSession,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:28:46,510 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 18:28:47,438 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 2294 ms []
+2020-09-08 18:28:47,566 INFO [org.springframework.web.servlet.FrameworkServlet] FrameworkServlet 'appServlet': initialization started []
+2020-09-08 18:28:47,571 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Sep 08 18:28:47 KST 2020]; parent: Root WebApplicationContext []
+2020-09-08 18:28:47,575 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml] []
+2020-09-08 18:28:47,721 INFO [org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider] JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning []
+2020-09-08 18:28:47,725 INFO [org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider] JSR-330 'javax.inject.Named' annotation found and supported for component scanning []
+2020-09-08 18:28:47,922 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring []
+2020-09-08 18:28:47,929 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c7c4c4a: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,transactionManager,transactionManager2,DeliveryDao,deliveryController,applicationContextProvider,DeliveryService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@2fe6ec54 []
+2020-09-08 18:28:48,101 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_save.do],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.spring.controller.DeliveryController.save(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) []
+2020-09-08 18:28:48,103 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_search],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.spring.controller.DeliveryController.search(java.lang.String) []
+2020-09-08 18:28:48,104 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_registerForm.do],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.controller.DeliveryController.registerForm(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) []
+2020-09-08 18:28:49,139 INFO [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0' []
+2020-09-08 18:28:49,380 INFO [org.springframework.web.servlet.FrameworkServlet] FrameworkServlet 'appServlet': initialization completed in 1814 ms []
+2020-09-08 18:29:02,437 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 18:29:09,730 INFO [com.spring.controller.DeliveryController] >>> tsis_search.do []
+2020-09-08 18:29:09,733 INFO [com.spring.controller.DeliveryController] >>>>>{"s_id":"8001815","gubun":"202009"} []
+2020-09-08 18:45:20,699 INFO [org.springframework.context.support.AbstractApplicationContext] Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Sep 08 18:28:47 KST 2020]; parent: Root WebApplicationContext []
+2020-09-08 18:45:20,706 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c7c4c4a: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,transactionManager,transactionManager2,DeliveryDao,deliveryController,applicationContextProvider,DeliveryService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@2fe6ec54 []
+2020-09-08 18:45:28,228 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 18:45:28,350 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 18:45:28 KST 2020]; root of context hierarchy []
+2020-09-08 18:45:28,447 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 18:45:29,282 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 18:45:29,366 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3820e812: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:45:29,459 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 18:45:30,051 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3820e812: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:45:30,054 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed []
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/jdbc-config.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [sqlmaps/delivery.xml]'; nested exception is java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5016)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5528)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [sqlmaps/delivery.xml]'; nested exception is java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:462)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:158)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:458)
+	... 24 more
+2020-09-08 18:46:03,610 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 18:46:03,705 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 18:46:03 KST 2020]; root of context hierarchy []
+2020-09-08 18:46:03,785 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 18:46:04,565 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 18:46:04,675 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@71fc9ad0: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,sqlSession2,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:46:04,778 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 18:46:05,305 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@71fc9ad0: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,sqlSession2,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:46:05,307 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed []
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/jdbc-config.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [sqlmaps/delivery.xml]'; nested exception is java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5016)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5528)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [sqlmaps/delivery.xml]'; nested exception is java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:462)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:158)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:458)
+	... 24 more
+2020-09-08 18:46:37,613 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 18:46:37,781 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 18:46:37 KST 2020]; root of context hierarchy []
+2020-09-08 18:46:37,886 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 18:46:38,681 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 18:46:38,797 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4796341f: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,sqlSession2,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:46:38,866 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 18:46:39,442 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4796341f: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,sqlSession2,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:46:39,444 ERROR [org.springframework.web.context.ContextLoader] Context initialization failed []
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/jdbc-config.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [sqlmaps/delivery.xml]'; nested exception is java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5016)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5528)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [sqlmaps/delivery.xml]'; nested exception is java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:462)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [sqlmaps/delivery.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:158)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:458)
+	... 24 more
+2020-09-08 18:47:54,521 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization started []
+2020-09-08 18:47:54,650 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing Root WebApplicationContext: startup date [Tue Sep 08 18:47:54 KST 2020]; root of context hierarchy []
+2020-09-08 18:47:54,748 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml] []
+2020-09-08 18:47:55,600 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/jdbc-config.xml] []
+2020-09-08 18:47:55,685 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7f180826: defining beans [jdbc,sqlSessionFactory,sqlSessionFactory2,sqlSession,sqlSession2,dataSource,dataSource2]; root of factory hierarchy []
+2020-09-08 18:47:55,782 INFO [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config/jdbc.properties] []
+2020-09-08 18:48:11,448 ERROR [org.apache.ibatis.mapping.VendorDatabaseIdProvider] Could not get a databaseId from dataSource []
+com.microsoft.sqlserver.jdbc.SQLServerException: 호스트 172.25.111.34, 포트 11433에 대한 TCP/IP 연결에 실패했습니다. 오류: "connect timed out. 연결 속성을 확인하십시오. SQL Server의 인스턴스가 호스트에서 실행되고 있고 포트에서 TCP/IP 연결을 허용하고 있는지 확인하십시오. 또한 방화벽에서 포트로의 TCP 연결을 차단하지 않는지 확인하십시오.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:190)
+	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:241)
+	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2243)
+	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:491)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1309)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:991)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:827)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1012)
+	at org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver(SimpleDriverDataSource.java:140)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseProductName(VendorDatabaseIdProvider.java:76)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseName(VendorDatabaseIdProvider.java:61)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseId(VendorDatabaseIdProvider.java:49)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:445)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:567)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:385)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:284)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5016)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5528)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2020-09-08 18:48:11,522 INFO [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 16994 ms []
+2020-09-08 18:48:11,630 INFO [org.springframework.web.servlet.FrameworkServlet] FrameworkServlet 'appServlet': initialization started []
+2020-09-08 18:48:11,634 INFO [org.springframework.context.support.AbstractApplicationContext] Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Sep 08 18:48:11 KST 2020]; parent: Root WebApplicationContext []
+2020-09-08 18:48:11,636 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml] []
+2020-09-08 18:48:11,755 INFO [org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider] JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning []
+2020-09-08 18:48:11,759 INFO [org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider] JSR-330 'javax.inject.Named' annotation found and supported for component scanning []
+2020-09-08 18:48:11,934 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring []
+2020-09-08 18:48:11,942 INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8073645: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,transactionManager,transactionManager2,DeliveryDao,deliveryController,applicationContextProvider,DeliveryService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7f180826 []
+2020-09-08 18:48:12,103 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_save.do],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.spring.controller.DeliveryController.save(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) []
+2020-09-08 18:48:12,105 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_search],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.spring.controller.DeliveryController.search(java.lang.String) []
+2020-09-08 18:48:12,107 INFO [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping] Mapped "{[/tsis_registerForm.do],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.controller.DeliveryController.registerForm(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) []
+2020-09-08 18:48:12,908 INFO [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping] Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0' []
+2020-09-08 18:48:13,210 INFO [org.springframework.web.servlet.FrameworkServlet] FrameworkServlet 'appServlet': initialization completed in 1579 ms []
+2020-09-08 18:48:23,246 INFO [com.spring.controller.DeliveryController] >>> tsis_registerForm.do []
+2020-09-08 18:48:29,779 INFO [com.spring.controller.DeliveryController] >>> tsis_search.do []
+2020-09-08 18:48:29,780 INFO [com.spring.controller.DeliveryController] >>>>>{"s_id":"8001815","gubun":"202009"} []
+2020-09-08 19:16:57,427 INFO [org.springframework.context.support.AbstractApplicationContext] Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Sep 08 18:48:11 KST 2020]; parent: Root WebApplicationContext []
+2020-09-08 19:16:57,450 INFO [org.springframework.beans.factory.support.DefaultSingletonBeanRegistry] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8073645: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,multipartResolver,transactionManager,transactionManager2,DeliveryDao,deliveryController,applicationContextProvider,DeliveryService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7f180826 []

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="order">
+	
+	<select id="order_cnt_mm" parameterType="hashmap" resultType="int">
+    	select 
+			ifnull(sum(ordercnt),0) as m_ordercnt_mm
+		from 
+			tb_order where 1=1 and id=#{user_id} 
+			and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m')
+    </select>
+    
+	<select id="getOrderCntMM" parameterType="hashmap" resultType="hashmap">
+    	select 
+			ifnull(sum(ordercnt),0) as m_ordercnt_mm
+		from 
+			tb_order where 1=1 and id=#{user_id} 
+			and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m')
+    </select>
+    
+    <select id="orderCheck" parameterType="hashmap" resultType="int">
+    	select 
+			count(*)
+		from 
+			tb_order where 1=1 and orderno = #{orderNo}
+    </select>
+    
+    <insert id="orderSave" parameterType="hashmap">
+    	insert into tb_order 
+    		(orderno, ordercnt, id, name, dept, regdate) 
+    	values 
+    		(#{orderNo}, #{orderCnt}, #{user_id}, #{name}, #{dept}, sysdate())
+    </insert>
+    
+    <select id="getMyOrderTotalCount" parameterType="hashmap" resultType="int">
+        select
+            ifnull(sum(ordercnt),0) as  sumCntMM
+        from
+            tb_order
+        where 1=1
+        and id = #{USERID}
+        and date_format(regdate, '%Y-%m') = #{YYMM} 
+    </select>
+    
+    <select id="getMyOrderList" parameterType="hashmap" resultType="hashmap">
+        select
+        	seq, name, id, dept, orderNo, orderCnt, date_format(regdate,'%Y-%m-%d %H:%i:%s') as regdate
+        from
+            tb_order
+        where 1=1
+        and id = #{USERID}
+        and date_format(regdate, '%Y-%m') = #{YYMM}
+        order by 
+        	seq desc
+    </select>
+
+	<select id="getOrderTotalCount" parameterType="hashmap" resultType="hashmap">
+    	select 
+			count(*) as orderTotalCnt , 
+			ifnull(sum(ordercnt),0) as orderSumCnt
+		from 
+			tb_order where 1=1 
+			<if test="search_type =='id' and search_value !='' ">
+				and id=#{search_value} 
+			</if>
+			<if test="search_type =='orderNo' and search_value !='' ">
+				and orderNo=#{search_value} 
+			</if>
+			<if test="date_start !='' and date_end !='' ">
+			<!-- and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m') -->
+				and date_format(regdate, '%Y-%m-%d') between #{date_start} AND #{date_end}
+			</if>
+			<!-- 
+			<if test="date_start =='' and date_end =='' ">
+				and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m')
+			</if>
+			 -->
+    </select>
+        
+    <select id="getOrderList" parameterType="hashmap" resultType="hashmap">
+        select
+        	seq, name, id, dept, orderNo, orderCnt, date_format(regdate,'%Y-%m-%d %H:%i:%s') as regdate
+        from
+            tb_order
+        where 1=1
+        <if test="search_type =='id' and search_value !='' ">
+			and id=#{search_value} 
+		</if>
+		<if test="search_type =='orderNo' and search_value !='' ">
+			and orderNo=#{search_value} 
+		</if>
+		<if test="date_start !='' and date_end !='' ">
+			<!-- and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m') -->
+			and date_format(regdate, '%Y-%m-%d') between #{date_start} AND #{date_end}
+		</if>
+		<!-- 
+		<if test="date_start =='' and date_end =='' ">
+			and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m')
+		</if>
+		 -->
+        order by seq desc
+        limit #{startNo}, #{endNo}
+    </select>
+    
+    <select id="getOrderListExcel" parameterType="hashmap" resultType="hashmap">
+        select
+        	seq, name, id, dept, orderNo, orderCnt, date_format(regdate,'%Y-%m-%d %H:%i:%s') as regdate
+        from
+            tb_order
+        where 1=1
+        <if test="search_type =='id' and search_value !='' ">
+			and id=#{search_value} 
+		</if>
+		<if test="search_type =='orderNo' and search_value !='' ">
+			and orderNo=#{search_value} 
+		</if>
+		<if test="date_start !='' and date_end !='' ">
+			<!-- and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m') -->
+			and date_format(regdate, '%Y-%m-%d') between #{date_start} AND #{date_end}
+		</if>
+        order by seq desc
+    </select>
+    
+    
+    <select id="getOrderInfo" parameterType="hashmap" resultType="hashmap">
+        select 
+			seq, orderno, orderCnt, date_format(regdate, '%Y-%m-%d %H:%i:%s') as regdate,
+			(
+				select   
+					ifnull(sum(ordercnt),0) as m_ordercnt_mm
+				from tb_order
+				where id = #{user_id}
+				and date_format(regdate, '%Y%m') = date_format(now(), '%Y%m') 
+			) m_ordercnt_mm
+		from 
+			tb_order 
+		where 1=1 and id= #{user_id}
+		and orderno= #{orderNo}
+        <if test="category !='' ">
+		    <!-- and category = #{category} -->
+		</if>
+    </select>
+    
+    
+    
+    <select id="orderTimeCheck" parameterType="hashmap" resultType="int">
+    	select  
+    		count(*) 
+    	from 
+    		tb_order_time 
+    	where DATE_FORMAT(now(),'%H:%i') between start_time and end_time
+    </select>
+	
+	
+</mapper>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+ 
+<log4j:configuration
+    xmlns:log4j="http://jakarta.apache.org/log4j/">
+     
+    <!-- 콘솔 로그 -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+         <layout class="org.apache.log4j.PatternLayout">
+              <param name="ConversionPattern" value="%d %p [%c{5}] %m [%X{userId}]%n" />
+              <param name="encoding" value="UTF-8" />
+         </layout>   
+    </appender>
+     
+    <!-- 날짜별 로그 파일 생성 -->
+    <appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <!-- <param name="File" value="/SW/tomcat-7.0.99/webapps/tsisIT/LOG/all.log"/> -->
+        <param name="File" value="/Users/gotaejong/ExternHard/97_Workspace/tsis/tsisIT/LOG/all.log"/>
+        
+        <param name="encoding" value="UTF-8" />
+        <param name="Append" value="true"/>
+        <!-- param name="MaxFileSize" value="100MB"/ -->
+        <!-- param name="MaxBackupIndex" value="2"></param -->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/> 
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %p [%C{10}] %m [%X{userId}]%n" />
+        </layout>   
+    </appender>
+      
+	<!-- appender :: sql -->
+	<appender name="sqlFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <!-- <param name="File" value="/SW/tomcat-7.0.99/webapps/tsisIT/LOG/sql.log"/> -->
+        <param name="File" value="/Users/gotaejong/ExternHard/97_Workspace/tsis/tsisIT/LOG/sql.log"/>
+
+        <param name="encoding" value="UTF-8" />
+        <param name="Append" value="true"/>
+        <!-- param name="MaxFileSize" value="100MB"/ -->
+        <!-- param name="MaxBackupIndex" value="2"></param -->
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/> 
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %p [%C{10}] %m [%X{userId}]%n" />
+        </layout>   
+    </appender>
+         
+    <!-- SQL logger -->
+ 
+    <logger name="jdbc.resultsettable" additivity="false">
+        <level value="info" />
+        <appender-ref ref="console" />
+        <appender-ref ref="sqlFile"/>
+    </logger>
+    <logger name="jdbc.sqlonly" additivity="false">
+        <level value="info" />
+        <appender-ref ref="console" />
+        <appender-ref ref="sqlFile"/>
+    </logger>     
+    <logger name="jdbc.audit" additivity="false">
+        <level value="off" />
+        <!-- <appender-ref ref="console" /> -->
+        <appender-ref ref="sqlFile"/>
+    </logger>
+    
+    <logger name="jdbc.sqltiming" additivity="false">
+        <level value="off" />
+        <!-- <appender-ref ref="console" /> --> 
+        <appender-ref ref="sqlFile"/>
+    </logger>
+    
+    <logger name="jdbc.connection" additivity="false">
+        <level value="off" />
+        <!-- <appender-ref ref="console" /> -->
+        <appender-ref ref="sqlFile"/>
+    </logger>
+
+    <logger name="jdbc.resultset" additivity="false">
+        <level value="off" />
+        <!-- <appender-ref ref="console" /> -->
+        <appender-ref ref="sqlFile"/>
+    </logger>
+
+ 
+    <!-- 기본 출력 설정 -->
+    <root>
+        <level value="DEBUG" />
+        <!-- <level value="INFO" /> -->
+        <appender-ref ref="console" />
+        <!-- <appender-ref ref="errFile"/> -->
+        <appender-ref ref="rollingFile"/>
+    </root> 
+     
+</log4j:configuration>
