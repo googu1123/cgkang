@@ -34,7 +34,7 @@
                     <input type="password" id="pwd" name="pwd" class="form-control" placeholder="비밀번호">
                 </div>          
                 <div class="form-group">
-                    <label><input type="checkbox" id="check_id" class="ichk" <c:if test="${ck eq 'Y' }"> checked="checked" </c:if>> 아이디 저장</label>
+                    <label><input type="checkbox" id="check_id" class="ichk" <c:if test="${ck eq 'Y' }"> checked="checked" </c:if>> 아이디 저장.</label>
                     <input type="hidden" id="ck" name="check_id" value="${ck }" >
                 </div>
             </div>
