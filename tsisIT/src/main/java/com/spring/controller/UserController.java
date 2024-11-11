@@ -38,7 +38,7 @@ public class UserController
     @RequestMapping(value="loginCheck.do")
     public String login(ModelMap model, HttpServletRequest request, HttpServletResponse response)
     {
-    	log.info(">>>>>>>> loginCheck2.do");
+    	log.info(">>>>>>>> loginCheck22222.do");
     	
     	String rt_code = ""; 
     	String rt_msg = "";
